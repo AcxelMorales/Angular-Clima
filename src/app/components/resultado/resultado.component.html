@@ -1,0 +1,10 @@
+<div class="col s12 m6">
+  <div class="card-panel white col s12">
+    <div class="black-text">
+      <h2>Clima de {{ data.name }}</h2>
+      <p class="temperatura"> {{ data.main?.temp - kelvin | number:'0.0-0' }} <span>&#x2103;</span></p>
+      <p>Temperatura Máxima: {{ data.main?.temp_max - kelvin }} &#x2103;</p>
+      <p>Temperatura Minima: {{ data.main?.temp_min - kelvin }} &#x2103;</p>
+    </div>
+  </div>
+</div>

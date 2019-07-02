@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col s12 m6">
+        <form ngNativeValidate [formGroup]="form" #f="ngForm" (ngSubmit)="getData(f)">
+        <div class="input-field col s12">
+            <input 
+                type="text" 
+                name="ciudad" 
+                id="ciudad" 
+                formControlName="ciudad" 
+                required
+            />
+            <label htmlFor="ciudad">Ciudad: </label>
+        </div>
+
+        <div class="input-field col s12">
+            <select name="pais" formControlName="pais" required>
+            <option value="US">Estados Unidos</option>
+            <option value="MX">México</option>
+            <option value="AR">Argentina</option>
+            <option value="CO">Colombia</option>
+            <option value="CR">Costa Rica</option>
+            <option value="PE">Perú</option>
+            <option value="ES">España</option>
+            </select>
+            <label htmlFor="pais">País: </label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="submit" class="waves-effect waves-light btn-large btn-block yellow accent-4"
+            value="Buscar Clima" />
+        </div>
+        </form>
+    </div>
+    <app-resultado [data]="clima" *ngIf="mostrar"></app-resultado>
+</div>
